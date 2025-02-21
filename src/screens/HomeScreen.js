@@ -20,7 +20,7 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.welcomeText}>Welcome to the Application! </Text>
+      <Text style={styles.welcomeText}>  Welcome to the Application! </Text>
       <Button title="Logout" onPress={handleLogout} /> {/* Logout button */}
     </View>
   );
