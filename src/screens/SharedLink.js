@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, Share } from 'react-native';
+import { View, Text, FlatList, Share, Platform, StyleSheet } from 'react-native';
 import { collection, addDoc, getDocs, query, where } from 'firebase/firestore';
 import * as Clipboard from 'expo-clipboard';
 import { useFocusEffect } from '@react-navigation/native';
 import { db } from '../../firebase';
 import { getAuth } from 'firebase/auth';
+
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: Platform.OS === 'ios' ? 40 : 20,
+  },
+});
 
 const SharedLinks = () => {
   const [links, setLinks] = useState([]);
@@ -46,7 +52,7 @@ const SharedLinks = () => {
   };
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Share a link from any social media platform and it will appear here.</Text>
       <FlatList
         data={links}
