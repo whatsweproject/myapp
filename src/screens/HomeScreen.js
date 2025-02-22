@@ -1,10 +1,14 @@
 // myapp/src/screens/HomeScreen.js
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import SharedLink from './SharedLink';
+import Notes from './Notes';
 import { getAuth, signOut } from 'firebase/auth'; // Import Firebase auth methods
 import { useNavigation } from '@react-navigation/native'; // Import useNavigation hook
 
-const HomeScreen = () => {
+const Tab = createMaterialTopTabNavigator();
+
+function HomeScreen() {
   const navigation = useNavigation(); // Get navigation prop
 
   const handleLogout = () => {
@@ -19,25 +23,23 @@ const HomeScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.welcomeText}>  Welcome to the Application! </Text>
-      <Button title="Logout" onPress={handleLogout} /> {/* Logout button */}
-    </View>
+    <Tab.Navigator>
+      <Tab.Screen 
+        name="Notes" 
+        component={Notes}
+        options={{
+          tabBarLabel: 'Notes'
+        }}
+      />
+      <Tab.Screen 
+        name="SharedLink" 
+        component={SharedLink}
+        options={{
+          tabBarLabel: 'Shared Links'
+        }}
+      />
+    </Tab.Navigator>
   );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f0f0f0', // Optional: Change background color
-  },
-  welcomeText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20, // Add some space below the welcome text
-  },
-});
+}
 
 export default HomeScreen;
