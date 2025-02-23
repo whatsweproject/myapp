@@ -1,0 +1,54 @@
+{
+    "project_info": {
+      "project_number": "401659328263",
+      "project_id": "whatswe-project",
+      "storage_bucket": "whatswe-project.firebasestorage.app"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:401659328263:android:8c01179c399181cf5cf7a2",
+          "android_client_info": {
+            "package_name": "com.app.whatswe"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "401659328263-1aap471k6mlaigkig01jgd55lsppnq35.apps.googleusercontent.com",
+            "client_type": 1,
+            "android_info": {
+              "package_name": "com.app.whatswe",
+              "certificate_hash": "34ca1e0c6c006e9d3e53e95133f9e8e65814889d"
+            }
+          },
+          {
+            "client_id": "401659328263-lf1lk6ajkq4uioq65bssn431785u2k7d.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyAvior33B9AjqvVTQFZcjwE99jT3Y9PXAM"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "401659328263-lf1lk6ajkq4uioq65bssn431785u2k7d.apps.googleusercontent.com",
+                "client_type": 3
+              },
+              {
+                "client_id": "401659328263-94fttn87c2n6deo2kfbe8u0629sm0msu.apps.googleusercontent.com",
+                "client_type": 2,
+                "ios_info": {
+                  "bundle_id": "com.example.whatswe"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
